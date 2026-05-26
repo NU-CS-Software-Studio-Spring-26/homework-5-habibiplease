@@ -1,0 +1,13 @@
+---
+description: Security rules for the sample todo app
+alwaysApply: true
+---
+
+# Security
+
+- Never write, log, or echo secrets, API keys, or production credentials (including `.env`, `config/master.key`, and Kamal secrets).
+- Never use `eval` or similar (`instance_eval`, `class_eval`) on user-supplied input.
+- Never call `html_safe` or `raw` on untrusted user input in views.
+- Use ActiveRecord and parameterized queries only; never interpolate user input into SQL strings.
+- Do not disable CSRF protection, strong parameters, or session security checks.
+- Do not add `skip_before_action :verify_authenticity_token` without explicit human approval.

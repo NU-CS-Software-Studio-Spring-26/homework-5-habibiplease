@@ -1,0 +1,23 @@
+.env
+.env.*
+config/master.key
+config/credentials/*.key
+tmp/
+log/
+storage/
+node_modules/
+
+# Kamal deploy secrets and hooks (may contain credentials)
+.kamal/secrets
+
+# SQLite database files (local state, not source)
+*.sqlite3
+*.sqlite3-*
+
+# Coverage and CI artifacts
+coverage/
+
+# Editor and OS junk
+.DS_Store
+*.swp
+*.swo
