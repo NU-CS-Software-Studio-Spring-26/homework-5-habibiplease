@@ -1,0 +1,14 @@
+---
+description: Rails 8 conventions for the sample todo app
+alwaysApply: true
+---
+
+# Rails conventions (todo app)
+
+- Prefer Turbo Streams over custom JavaScript for in-page updates; use `respond_to { |f| f.turbo_stream }` and views named `action.turbo_stream.erb`.
+- Keep migrations reversible (`change` with reversible blocks or explicit `up`/`down`).
+- Use strong parameters in controllers; never assign from `params` directly on models.
+- Use `bin/rails generate migration` (or scaffold) instead of hand-writing boilerplate migrations.
+- Scope schema and features to this todo app only—do not import models or migrations from other projects.
+- Match existing Minitest style in `test/`; run `bin/rails test` before finishing.
+- Use `dom_id(record)` for Turbo Stream replace/update targets on todo rows.
